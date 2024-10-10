@@ -36,11 +36,20 @@
     </td>
 
   </tr>
+
   <tr>
-    <td class="evenRow">
-        <s:submit align="left" value="Enviar"/>
-    </td>
-  </tr>
+        <td class="evenRow">
+          <s:fielderror fieldName = "invoiceBean.price" />
+          <s:text name="form.price.message"/>
+          <s:textfield id="price" name="invoiceBean.price"/>
+        </td>
+
+      </tr>
+      <tr>
+          <td class="evenRow">
+              <s:submit align="left" value="Enviar"/>
+          </td>
+        </tr>
   </table>
 </s:form>
 

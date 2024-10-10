@@ -19,9 +19,6 @@
             <param name="invoiceBean"  />
             <result name="input">registryForm.jsp</result>
         </action>
-
-
-
     </package>
 
 </struts>

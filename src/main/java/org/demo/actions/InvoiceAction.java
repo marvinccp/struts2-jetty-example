@@ -23,7 +23,18 @@ public class InvoiceAction extends ActionSupport  {
     @Override
     public void validate() {
         if (invoiceBean.getSubject().isEmpty()) {
-            addFieldError("invoiceBean.subject", "El concepto es obligatorio.");
+            addFieldError("invoiceBean.subject", "El concepto es Obligatorio.");
+        }if (invoiceBean.getPrice().isEmpty()) {
+            addFieldError("invoiceBean.price", "El Importe es Obligatorio.");
         }
     }
+
+    public Double getIva() {
+        return invoiceBean.calculateIva();
+    }
+
+    public Double getTotal(){
+        return invoiceBean.calculateTotal();
+    }
+
 }
